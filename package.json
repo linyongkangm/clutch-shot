@@ -1,12 +1,14 @@
 {
-  "name": "ali",
+  "name": "clutch-shot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "dev": "ts-node ./src/index.ts",
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node ./built/index.js",
+    "release": "npm install --production && npm run build && npm run start"
   },
   "author": "",
   "license": "ISC",
